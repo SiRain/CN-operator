@@ -1,0 +1,4 @@
+FROM ubuntu:latest
+COPY httpsev /httpsev
+EXPOSE 80
+ENTRYPOINT ["/httpsev"]
