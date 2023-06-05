@@ -11,20 +11,19 @@ import (
 )
  
 func index(w http.ResponseWriter, r *http.Request) {
-   // w.Write([]byte("<h1>Welcome to Cloud Native</h1>"))
-   // 03.设置version
+   // 03. 设置version
    os.Setenv("VERSION", "v0.0.1")
    version := os.Getenv("VERSION")
    w.Header().Set("VERSION", version)
    fmt.Printf("os version: %s \n", version)
-   // 02.将requst中的header 设置到 reponse中
+   // 02. 将 requst 中的 header 设置到 reponse 中
    for k, v := range r.Header {
       for _, vv := range v {
          fmt.Printf("Header key: %s, Header value: %s \n", k, v)
          w.Header().Set(k, vv)
       }
    }
-   // 04.记录日志并输出
+   // 04. 记录日志并输出
    clientip := getCurrentIP(r)
    //fmt.Println(r.RemoteAddr)
    log.Printf("Success! Response code: %d", 200)
