@@ -1,0 +1,17 @@
+{
+    "CN": "yon.com",
+    "hosts": [
+        "www.yon.com"
+    ],
+    "key": {
+        "algo": "rsa",
+        "size": 2048
+    },
+    "names": [
+        {
+            "C": "CN",
+            "L": "Shanghai",
+            "ST": "Shanghai"
+        }
+    ]
+}

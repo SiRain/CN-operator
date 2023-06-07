@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: https-ingress
+spec:
+  #ingressClassName: nginx
+  tls:
+  - hosts:
+    - www.yon.com
+    secretName: yon-secret
+  rules:
+  - host: www.yon.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: httpsvc
+            port:
+              number: 80

@@ -52,7 +52,6 @@ zy835@YONX MINGW64 /e/study/Document/k8s/云原生架构师课程/CN-operator (m
 $ git clone git@github.com:SiRain/CN-operator.git
 Cloning into 'CN-operator'...
 warning: You appear to have cloned an empty repository.
-
 ```
 
 ## 8、上传本地文档到github
